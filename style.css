@@ -1,0 +1,23 @@
+header {
+  text-align: center;
+  border: 1px solid red;
+}
+
+.color {
+  text-align: center;
+  border: 1px solid red;
+  width: 23%;
+  float: left;
+  border-radius: 5px;
+  margin: 15px;
+
+}
+
+#color-palette {
+  text-align: center;
+  border: 1px solid red;
+  width: 100%;
+  float: left;
+  border-radius: 5px;
+  margin: 15px;
+}
