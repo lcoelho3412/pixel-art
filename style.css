@@ -5,18 +5,44 @@ header {
 
 .color {
   text-align: center;
-  border: 1px solid red;
-  width: 23%;
+  border: 1px solid black;
   float: left;
-  border-radius: 5px;
-  margin: 15px;
+  border-radius: 5px; 
+}
 
+#cor1 {
+  background-color: #075BF2;
+  width: 30px;
+  padding: 50px;
+  margin: 20px;
+  
+}
+
+#cor2 {
+  background-color: #089FFC;
+  width: 30px;
+  padding: 50px;
+  margin: 20px;
+}
+
+#cor3 {
+  background-color: #12CDE6;
+  width: 30px;
+  padding: 50px;
+  margin: 20px;
+}
+
+#cor4 {
+  background-color: #08FCD6;
+  width: 30px;
+  padding: 50px;
+  margin: 20px;
 }
 
 #color-palette {
   text-align: center;
   border: 1px solid red;
-  width: 100%;
+  width: 90%;
   float: left;
   border-radius: 5px;
   margin: 15px;
