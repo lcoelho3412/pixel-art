@@ -49,6 +49,11 @@ header {
   margin: 10px;
 }
 
+#pixel-board {
+  text-align: center;
+  border: 1px solid red;
+}
+
 .pixel {
   border: solid 1px black;
   width: 40px;
