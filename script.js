@@ -22,27 +22,23 @@ function changeClass(e) {
   // adcionar selected ao clicado
   e.target.classList.add('selected');
   console.log(e)
-
 }
-const seletor = document.getElementsByClassName('color');
-for (let index = 0; index < seletor.length; index += 1) {
-  seletor[index].addEventListener('click', changeClass);
+const selector = document.getElementsByClassName('color');
+for (let index = 0; index < selector.length; index += 1) {
+  selector[index].addEventListener('click', changeClass);
 }
 
-// função para capturar cores das paletas
-
-// const palletColor1 = document.getElementById('cor1')
-
-// // console.log(bgColor)
-// palletColor1.addEventListener("click", e => {
-//   let bgColor = window.getComputedStyle(palletColor1, null).getPropertyValue("background-color");
-//   console.log(bgColor)
-// })
-
-// const palletColor2 = document.getElementById('cor2')
-
-// // console.log(bgColor)
-// palletColor2.addEventListener("click", e => {
-//   let bgColor = window.getComputedStyle(palletColor2, null).getPropertyValue("background-color");
-//   console.log(bgColor)
-// })
+//acessa pixel através da classe
+const pixelPaint = document.querySelectorAll(".pixel")
+console.log(pixelPaint)
+//ao clicar aplica bgColor ao pixel
+for (let index = 0; index < pixelPaint.length; index++) {
+  pixelPaint[index].addEventListener("click", e => {
+    //qual elemento contem selected
+    const selectedElemnet = document.querySelector('.selected')
+    // qual a cor de fundo
+    const bgColor = window.getComputedStyle(selectedElemnet).getPropertyValue('background-color');
+    // passar cor para elento clicado
+    e.target.style.backgroundColor = bgColor
+  })
+}
