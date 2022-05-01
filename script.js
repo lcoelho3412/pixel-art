@@ -21,24 +21,31 @@ function changeClass(e) {
   findSelected.classList.remove('selected');
   // adcionar selected ao clicado
   e.target.classList.add('selected');
-  console.log(e)
+  console.log(e);
 }
 const selector = document.getElementsByClassName('color');
 for (let index = 0; index < selector.length; index += 1) {
   selector[index].addEventListener('click', changeClass);
 }
 
-//acessa pixel através da classe
-const pixelPaint = document.querySelectorAll(".pixel")
-console.log(pixelPaint)
-//ao clicar aplica bgColor ao pixel
-for (let index = 0; index < pixelPaint.length; index++) {
-  pixelPaint[index].addEventListener("click", e => {
-    //qual elemento contem selected
-    const selectedElemnet = document.querySelector('.selected')
+//  acessa pixel através da classe
+const pixelPaint = document.querySelectorAll('.pixel');
+//    ao clicar aplica bgColor ao pixel
+for (let index = 0; index < pixelPaint.length; index += 1) {
+  pixelPaint[index].addEventListener('click', (e) => {
+    //  qual elemento contem selected
+    const selectedElemnet = document.querySelector('.selected');
     // qual a cor de fundo
     const bgColor = window.getComputedStyle(selectedElemnet).getPropertyValue('background-color');
     // passar cor para elento clicado
-    e.target.style.backgroundColor = bgColor
-  })
+    e.target.style.backgroundColor = bgColor;
+  });
 }
+
+function clearBoard() {
+  const clearEverything = document.querySelectorAll('.pixel');
+  for (let index = 0; index < clearEverything.length; index += 1) {
+    clearEverything[index].style.backgroundColor = 'white';
+  }
+}
+console.log(clearBoard);
